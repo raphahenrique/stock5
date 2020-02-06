@@ -1,0 +1,11 @@
+framework module NetworkLIB {
+  umbrella header "NetworkLIB.h"
+
+  export *
+  module * { export * }
+}
+
+module NetworkLIB.Swift {
+    header "NetworkLIB-Swift.h"
+    requires objc
+}

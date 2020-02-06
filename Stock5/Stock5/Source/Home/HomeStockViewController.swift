@@ -35,7 +35,7 @@ class HomeStockViewController: UIViewController {
         let difference = sellPrice - buyPrice
         let percentage = difference / buyPrice * 100
         
-        percentageLabel.text = "\(percentage) %"
+        percentageLabel.text = "\(String(format: "%.3f ", percentage)) %"
         if percentage < 0 {
             percentageLabel.textColor = .red
         } else {

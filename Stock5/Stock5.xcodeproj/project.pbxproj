@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981EC72D23EA469D00CB8C7D /* NetworkLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2E7DE23E912F5009D429B /* NetworkLIB.framework */; };
+		981EC72E23EA469D00CB8C7D /* NetworkLIB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2E7DE23E912F5009D429B /* NetworkLIB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9895F74423CD5B67006BB50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895F74323CD5B67006BB50D /* AppDelegate.swift */; };
 		9895F74623CD5B67006BB50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895F74523CD5B67006BB50D /* SceneDelegate.swift */; };
 		9895F74823CD5B67006BB50D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895F74723CD5B67006BB50D /* HomeViewController.swift */; };
@@ -14,7 +16,22 @@
 		9895F74D23CD5B6A006BB50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9895F74C23CD5B6A006BB50D /* Assets.xcassets */; };
 		9895F75023CD5B6A006BB50D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9895F74E23CD5B6A006BB50D /* LaunchScreen.storyboard */; };
 		9895F75B23CD5F3C006BB50D /* HomeStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895F75A23CD5F3C006BB50D /* HomeStockViewController.swift */; };
+		98982B1E23EC31200046C3E2 /* StocksProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98982B1D23EC31200046C3E2 /* StocksProvider.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		981EC72F23EA469D00CB8C7D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				981EC72E23EA469D00CB8C7D /* NetworkLIB.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9895F74023CD5B67006BB50D /* Stock5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stock5.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +43,9 @@
 		9895F74F23CD5B6A006BB50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9895F75123CD5B6A006BB50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9895F75A23CD5F3C006BB50D /* HomeStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStockViewController.swift; sourceTree = "<group>"; };
+		98982B1D23EC31200046C3E2 /* StocksProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksProvider.swift; sourceTree = "<group>"; };
+		98F2E7DA23E9119B009D429B /* NetworkLIB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkLIB.framework; path = ../local_dependencies/NetworkLIB.framework; sourceTree = "<group>"; };
+		98F2E7DE23E912F5009D429B /* NetworkLIB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkLIB.framework; path = local_dependencies/NetworkLIB.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981EC72D23EA469D00CB8C7D /* NetworkLIB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +65,7 @@
 			children = (
 				9895F74223CD5B67006BB50D /* Stock5 */,
 				9895F74123CD5B67006BB50D /* Products */,
+				98F2E7D923E9119B009D429B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +101,7 @@
 		9895F75823CD5ED3006BB50D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				98982B1C23EC31050046C3E2 /* Network */,
 				9895F75923CD5EE7006BB50D /* Home */,
 			);
 			path = Source;
@@ -94,6 +117,23 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		98982B1C23EC31050046C3E2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				98982B1D23EC31200046C3E2 /* StocksProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		98F2E7D923E9119B009D429B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98F2E7DE23E912F5009D429B /* NetworkLIB.framework */,
+				98F2E7DA23E9119B009D429B /* NetworkLIB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,6 +144,7 @@
 				9895F73C23CD5B67006BB50D /* Sources */,
 				9895F73D23CD5B67006BB50D /* Frameworks */,
 				9895F73E23CD5B67006BB50D /* Resources */,
+				981EC72F23EA469D00CB8C7D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9895F75B23CD5F3C006BB50D /* HomeStockViewController.swift in Sources */,
+				98982B1E23EC31200046C3E2 /* StocksProvider.swift in Sources */,
 				9895F74823CD5B67006BB50D /* HomeViewController.swift in Sources */,
 				9895F74423CD5B67006BB50D /* AppDelegate.swift in Sources */,
 				9895F74623CD5B67006BB50D /* SceneDelegate.swift in Sources */,
@@ -251,6 +293,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -305,6 +348,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -314,6 +358,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Z67258WU3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/local_dependencies",
+				);
 				INFOPLIST_FILE = Stock5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,6 +381,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Z67258WU3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/local_dependencies",
+				);
 				INFOPLIST_FILE = Stock5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
