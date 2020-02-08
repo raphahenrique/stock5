@@ -10,7 +10,7 @@
         <!--Item 2-->
         <scene sceneID="6lM-I8-tQL">
             <objects>
-                <viewController id="oMt-85-WEm" sceneMemberID="viewController">
+                <viewController id="oMt-85-WEm" customClass="PricesViewController" customModule="Stock5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mvd-mp-Cdi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,21 +75,44 @@
             </objects>
             <point key="canvasLocation" x="184.80000000000001" y="966.56671664167925"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Stock View Controller-->
         <scene sceneID="RRc-ec-MVe">
             <objects>
-                <viewController id="wN3-gh-sHi" sceneMemberID="viewController">
+                <viewController id="wN3-gh-sHi" customClass="SearchStockViewController" customModule="Stock5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8uf-0e-gYq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-77-qfh">
+                                <rect key="frame" x="16" y="48" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WXy-gf-85b">
+                                <rect key="frame" x="16" y="90" width="343" height="557"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WXy-gf-85b" firstAttribute="trailing" secondItem="KNB-77-qfh" secondAttribute="trailing" id="2uL-Wq-6lD"/>
+                            <constraint firstItem="KNB-77-qfh" firstAttribute="top" secondItem="PUT-aL-Law" secondAttribute="top" constant="48" id="3eL-C8-V3k"/>
+                            <constraint firstItem="KNB-77-qfh" firstAttribute="leading" secondItem="PUT-aL-Law" secondAttribute="leading" constant="16" id="7tG-NR-qv0"/>
+                            <constraint firstItem="PUT-aL-Law" firstAttribute="trailing" secondItem="KNB-77-qfh" secondAttribute="trailing" constant="16" id="BFA-5u-w0R"/>
+                            <constraint firstItem="WXy-gf-85b" firstAttribute="leading" secondItem="KNB-77-qfh" secondAttribute="leading" id="ZwV-5e-Cvh"/>
+                            <constraint firstItem="WXy-gf-85b" firstAttribute="top" secondItem="KNB-77-qfh" secondAttribute="bottom" constant="8" id="xZG-tk-nIN"/>
+                            <constraint firstItem="WXy-gf-85b" firstAttribute="bottom" secondItem="PUT-aL-Law" secondAttribute="bottom" id="xol-To-h2f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PUT-aL-Law"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Vi-r0-FRo"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="KNB-77-qfh" id="Zfp-uN-1tU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfR-AF-edx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="967"/>
+            <point key="canvasLocation" x="989.60000000000002" y="966.56671664167925"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="Gay-Bq-wYg">

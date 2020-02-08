@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		981EC72D23EA469D00CB8C7D /* NetworkLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2E7DE23E912F5009D429B /* NetworkLIB.framework */; };
 		981EC72E23EA469D00CB8C7D /* NetworkLIB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2E7DE23E912F5009D429B /* NetworkLIB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9881CC8E23EE3E7E00769AF5 /* PricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881CC8D23EE3E7E00769AF5 /* PricesViewController.swift */; };
+		9881CC9023EE429E00769AF5 /* SearchStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881CC8F23EE429E00769AF5 /* SearchStockViewController.swift */; };
 		9895F74423CD5B67006BB50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895F74323CD5B67006BB50D /* AppDelegate.swift */; };
 		9895F74623CD5B67006BB50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895F74523CD5B67006BB50D /* SceneDelegate.swift */; };
 		9895F74823CD5B67006BB50D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895F74723CD5B67006BB50D /* HomeViewController.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9881CC8D23EE3E7E00769AF5 /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
+		9881CC8F23EE429E00769AF5 /* SearchStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStockViewController.swift; sourceTree = "<group>"; };
 		9895F74023CD5B67006BB50D /* Stock5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stock5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9895F74323CD5B67006BB50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9895F74523CD5B67006BB50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9881CC8A23EE3DF400769AF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9881CC8B23EE3E0100769AF5 /* Storyboad */ = {
+			isa = PBXGroup;
+			children = (
+				9895F74923CD5B67006BB50D /* Home.storyboard */,
+			);
+			path = Storyboad;
+			sourceTree = "<group>";
+		};
+		9881CC8C23EE3E1200769AF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9895F74723CD5B67006BB50D /* HomeViewController.swift */,
+				9895F75A23CD5F3C006BB50D /* HomeStockViewController.swift */,
+				9881CC8D23EE3E7E00769AF5 /* PricesViewController.swift */,
+				9881CC8F23EE429E00769AF5 /* SearchStockViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9895F73723CD5B67006BB50D = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +140,9 @@
 		9895F75923CD5EE7006BB50D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9895F74923CD5B67006BB50D /* Home.storyboard */,
-				9895F74723CD5B67006BB50D /* HomeViewController.swift */,
-				9895F75A23CD5F3C006BB50D /* HomeStockViewController.swift */,
+				9881CC8C23EE3E1200769AF5 /* Controller */,
+				9881CC8B23EE3E0100769AF5 /* Storyboad */,
+				9881CC8A23EE3DF400769AF5 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -206,11 +236,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9881CC8E23EE3E7E00769AF5 /* PricesViewController.swift in Sources */,
 				9895F75B23CD5F3C006BB50D /* HomeStockViewController.swift in Sources */,
 				98982B1E23EC31200046C3E2 /* StocksProvider.swift in Sources */,
 				9895F74823CD5B67006BB50D /* HomeViewController.swift in Sources */,
 				9895F74423CD5B67006BB50D /* AppDelegate.swift in Sources */,
 				9895F74623CD5B67006BB50D /* SceneDelegate.swift in Sources */,
+				9881CC9023EE429E00769AF5 /* SearchStockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
