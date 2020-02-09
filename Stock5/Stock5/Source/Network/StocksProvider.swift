@@ -54,7 +54,7 @@ class StocksProvider: StockProviderProtocol {
     let query = "query?function=SYMBOL_SEARCH&keywords="
     let apiKey = "&apikey=5QM7EM88N0WT3XE5"
     
-    func searchForStock(keyword: String, params: SPParams? = nil ,completion: @escaping StockHandler) {
+    func searchForStock(keyword: String, params: SPParams? = nil, completion: @escaping StockHandler) {
         
         let completedURL = alphaVantageURL + query + keyword + apiKey
         
@@ -68,13 +68,13 @@ class StocksProvider: StockProviderProtocol {
             
             guard let response = response as? HTTPURLResponse, response.statusCode > 299 else {
                 let err = SPError(error: error, errorType: .noGoodStatusCode)
-                completion(data,err)
+                completion(data, err)
                 return
             }
             
             guard let content = data else {
                 let err = SPError(error: error, errorType: .parseError)
-                completion(data,err)
+                completion(data, err)
                 return
             }
             

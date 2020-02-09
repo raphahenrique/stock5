@@ -89,7 +89,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WXy-gf-85b">
-                                <rect key="frame" x="16" y="90" width="343" height="557"/>
+                                <rect key="frame" x="16" y="98" width="343" height="549"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -100,7 +100,7 @@
                             <constraint firstItem="KNB-77-qfh" firstAttribute="leading" secondItem="PUT-aL-Law" secondAttribute="leading" constant="16" id="7tG-NR-qv0"/>
                             <constraint firstItem="PUT-aL-Law" firstAttribute="trailing" secondItem="KNB-77-qfh" secondAttribute="trailing" constant="16" id="BFA-5u-w0R"/>
                             <constraint firstItem="WXy-gf-85b" firstAttribute="leading" secondItem="KNB-77-qfh" secondAttribute="leading" id="ZwV-5e-Cvh"/>
-                            <constraint firstItem="WXy-gf-85b" firstAttribute="top" secondItem="KNB-77-qfh" secondAttribute="bottom" constant="8" id="xZG-tk-nIN"/>
+                            <constraint firstItem="WXy-gf-85b" firstAttribute="top" secondItem="KNB-77-qfh" secondAttribute="bottom" constant="16" id="xZG-tk-nIN"/>
                             <constraint firstItem="WXy-gf-85b" firstAttribute="bottom" secondItem="PUT-aL-Law" secondAttribute="bottom" id="xol-To-h2f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PUT-aL-Law"/>
@@ -108,6 +108,7 @@
                     <navigationItem key="navigationItem" id="6Vi-r0-FRo"/>
                     <connections>
                         <outlet property="searchTextField" destination="KNB-77-qfh" id="Zfp-uN-1tU"/>
+                        <outlet property="stocksTableView" destination="WXy-gf-85b" id="6xR-Ez-gIc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfR-AF-edx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
