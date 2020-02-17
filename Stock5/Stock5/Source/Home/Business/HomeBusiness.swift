@@ -43,10 +43,28 @@ class HomeBusiness: HomeBusinessProtocol {
                 return
             }
             
-            // cast data to model
+            if let content = data {
+                let conv = self.unwrap(data: content)
+                
+                if let matches = conv?.bestMatches {
+                    for item in matches {
+                        print(item.name)
+                    }
+                }
+            }
             
         }
         
+    }
+    
+    internal func unwrap(data: Data) -> SAlphaVantageSearchAPIModel? {
+        do {
+            let cardList = try JSONDecoder().decode(SAlphaVantageSearchAPIModel.self, from: data)
+            return cardList
+        } catch {
+            print("DEBUG -> ERROR parsing")
+            return nil
+        }
     }
     
 }
