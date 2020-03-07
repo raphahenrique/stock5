@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		981EC72D23EA469D00CB8C7D /* NetworkLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2E7DE23E912F5009D429B /* NetworkLIB.framework */; };
 		981EC72E23EA469D00CB8C7D /* NetworkLIB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2E7DE23E912F5009D429B /* NetworkLIB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98255CE02413FEB7008C9E49 /* SearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98255CDF2413FEB7008C9E49 /* SearchResultsCell.xib */; };
 		9829DD8023FAACA2004E1AD0 /* StocksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829DD7F23FAACA2004E1AD0 /* StocksModel.swift */; };
 		9881CC8E23EE3E7E00769AF5 /* PricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881CC8D23EE3E7E00769AF5 /* PricesViewController.swift */; };
 		9881CC9023EE429E00769AF5 /* SearchStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881CC8F23EE429E00769AF5 /* SearchStockViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		98255CDF2413FEB7008C9E49 /* SearchResultsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsCell.xib; sourceTree = "<group>"; };
 		9829DD7F23FAACA2004E1AD0 /* StocksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksModel.swift; sourceTree = "<group>"; };
 		9881CC8D23EE3E7E00769AF5 /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
 		9881CC8F23EE429E00769AF5 /* SearchStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStockViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98255CDD2413FE3F008C9E49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98255CDE2413FE45008C9E49 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98255CDE2413FE45008C9E49 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				98255CDF2413FEB7008C9E49 /* SearchResultsCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9829DD7E23FAAC7D004E1AD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +178,7 @@
 		9895F75923CD5EE7006BB50D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				98255CDD2413FE3F008C9E49 /* View */,
 				9829DD7E23FAAC7D004E1AD0 /* Model */,
 				988DE91623EF984400AFE931 /* Business */,
 				9881CC8C23EE3E1200769AF5 /* Controller */,
@@ -247,6 +266,7 @@
 			files = (
 				9895F75023CD5B6A006BB50D /* LaunchScreen.storyboard in Resources */,
 				9895F74D23CD5B6A006BB50D /* Assets.xcassets in Resources */,
+				98255CE02413FEB7008C9E49 /* SearchResultsCell.xib in Resources */,
 				9895F74B23CD5B67006BB50D /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HomeBusinessProtocol {
+protocol HomeBusinessContract {
     
     
     
@@ -16,13 +16,13 @@ protocol HomeBusinessProtocol {
 
 protocol HomeBusinessDelegate: class {
     
-    func didReturnSearch()
+    func didReturnSearch(matches: [SAVResultModel])
     func errorToSearch()
     
     
 }
 
-class HomeBusiness: HomeBusinessProtocol {
+class HomeBusiness: HomeBusinessContract {
     
     private let provider: StockProviderProtocol
     
@@ -47,14 +47,14 @@ class HomeBusiness: HomeBusinessProtocol {
                 let conv = self.unwrap(data: content)
                 
                 if let matches = conv?.bestMatches {
-                    for item in matches {
-                        print(item.name)
-                    }
+                    self.delegate?.didReturnSearch(matches: matches)
+                } else {
+                    self.delegate?.errorToSearch()
                 }
+            } else {
+                self.delegate?.errorToSearch()
             }
-            
         }
-        
     }
     
     internal func unwrap(data: Data) -> SAlphaVantageSearchAPIModel? {
@@ -65,6 +65,7 @@ class HomeBusiness: HomeBusinessProtocol {
             print("DEBUG -> ERROR parsing")
             return nil
         }
+        // try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
     }
     
 }

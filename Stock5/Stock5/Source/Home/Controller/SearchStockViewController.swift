@@ -10,10 +10,13 @@ import UIKit
 
 class SearchStockViewController: UIViewController {
     
+    // to do - move it to view
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var stocksTableView: UITableView!
     
-    
+    // to do - create view model
+    private lazy var business = HomeBusiness(provider: StocksProvider(), delegate: self)
+    var searchResults = [SAVResultModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +24,12 @@ class SearchStockViewController: UIViewController {
         searchTextField.delegate = self
         stocksTableView.delegate = self
         stocksTableView.dataSource = self
+        stocksTableView.register(UITableViewCell.self, forCellReuseIdentifier: "defaultCell")
         
     }
     
     func searchStock(term: String) {
-        
-        
-        print("i am just printing \(term)")
-        
+        self.business.searchForStock(keyword: term)
     }
     
 }
@@ -48,11 +49,32 @@ extension SearchStockViewController: UITextFieldDelegate {
 
 extension SearchStockViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = stocksTableView.dequeueReusableCell(withIdentifier: "defaultCell")
+        
+        cell?.textLabel?.text = searchResults[indexPath.row].name
+        cell?.detailTextLabel?.text = searchResults[indexPath.row].symbol
+        
+        return cell ?? UITableViewCell()
+    }
+    
+}
+
+extension SearchStockViewController: HomeBusinessDelegate {
+    
+    func didReturnSearch(matches: [SAVResultModel]) {
+        DispatchQueue.main.async {
+            self.searchResults = matches
+            self.stocksTableView.reloadData()
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func errorToSearch() {
+        print("nothing to show")
     }
     
     
@@ -60,3 +82,4 @@ extension SearchStockViewController: UITableViewDelegate, UITableViewDataSource 
     
     
 }
+

@@ -66,11 +66,11 @@ class StocksProvider: StockProviderProtocol {
                 return
             }
             
-            guard let response = response as? HTTPURLResponse, response.statusCode > 299 else {
-                let err = SPError(error: error, errorType: .noGoodStatusCode)
-                completion(data, err)
-                return
-            }
+//            guard let response = response as? HTTPURLResponse, response.statusCode > 299 else {
+//                let err = SPError(error: error, errorType: .noGoodStatusCode)
+//                completion(data, err)
+//                return
+//            }
             
             guard let content = data else {
                 let err = SPError(error: error, errorType: .parseError)
